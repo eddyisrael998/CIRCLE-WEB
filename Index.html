@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="CIRCLE brings people together through live rooms, creators, entertainment and community.">
+  <title>CIRCLE — Connect. Share. Belong.</title>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #080b16;
+      color: #f5f7ff;
+      line-height: 1.6;
+    }
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 7%;
+      border-bottom: 1px solid #242a40;
+    }
+    .logo { font-size: 27px; font-weight: 800; color: #9b8cff; }
+    nav a { color: #dce0f5; margin-left: 18px; text-decoration: none; }
+    .hero { text-align: center; padding: 95px 20px 75px; }
+    .hero h1 { font-size: clamp(40px, 8vw, 70px); line-height: 1.1; margin: 12px 0; }
+    .hero h1 span { color: #9b8cff; }
+    .hero p { max-width: 620px; margin: 20px auto; color: #b8bfd7; font-size: 18px; }
+    .button {
+      display: inline-block; background: #8b79ff; color: white;
+      padding: 13px 24px; border-radius: 10px; text-decoration: none;
+      font-weight: bold; margin: 8px;
+    }
+    .secondary { background: transparent; border: 1px solid #555d7c; }
+    section { padding: 55px 7%; }
+    h2 { text-align: center; font-size: 32px; }
+    .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 18px; }
+    .card { background: #12182a; padding: 25px; border: 1px solid #252d48; border-radius: 16px; }
+    .card h3 { color: #b5a9ff; }
+    .muted { color: #b8bfd7; }
+    footer { border-top: 1px solid #242a40; padding: 30px 7%; color: #b8bfd7; text-align: center; }
+    footer a { color: #c5bcff; margin: 0 8px; }
+    @media (max-width: 600px) {
+      header { padding: 16px 5%; }
+      nav a { margin-left: 8px; font-size: 13px; }
+      .hero { padding-top: 65px; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">◉ CIRCLE</div>
+    <nav>
+      <a href="#features">Features</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <p>YOUR WORLD. YOUR PEOPLE.</p>
+      <h1>Connect.<br><span>Share. Belong.</span></h1>
+      <p>CIRCLE is being built to bring communities, creators, live rooms and entertainment together in one place.</p>
+      <a class="button" href="#features">Explore CIRCLE</a>
+      <a class="button secondary" href="#about">Discover our vision</a>
+    </section>
+
+    <section id="features">
+      <h2>One platform. Many possibilities.</h2>
+      <div class="cards">
+        <article class="card"><h3>🎥 Live Rooms</h3><p class="muted">Connect with others in interactive rooms and shared experiences.</p></article>
+        <article class="card"><h3>✨ Creator Community</h3><p class="muted">Discover creators, share content and build your community.</p></article>
+        <article class="card"><h3>🎁 Gifts & Support</h3><p class="muted">Our planned creator-support features are being developed with payment security in mind.</p></article>
+        <article class="card"><h3>🌍 Community</h3><p class="muted">Bring people together around interests, learning and entertainment.</p></article>
+      </div>
+    </section>
+
+    <section id="about">
+      <h2>About CIRCLE</h2>
+      <p class="muted" style="max-width:760px;margin:auto;text-align:center">
+        Our vision is to build a welcoming digital space where people can connect, creators can grow and communities can share experiences. CIRCLE is under development; feature availability will be announced as each service becomes ready.
+      </p>
+    </section>
+
+    <section id="contact">
+      <h2>Contact & Support</h2>
+      <p class="muted" style="text-align:center">Questions about CIRCLE? Contact our team at the official support address once it has been established.</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2026 CIRCLE. All rights reserved.</p>
+    <p>
+      <a href="privacy.html">Privacy Policy</a>
+      <a href="terms.html">Terms of Service</a>
+      <a href="refunds.html">Payments & Refunds</a>
+    </p>
+    <p>Features are under development and may not yet be available.</p>
+  </footer>
+</body>
+          </html>
