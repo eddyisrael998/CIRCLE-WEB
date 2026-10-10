@@ -1,0 +1,350 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#090d18">
+  <meta name="description" content="CIRCLE is a social platform concept for connecting people through live rooms, creators, entertainment and community.">
+  <title>CIRCLE | Connect. Create. Experience.</title>
+  <style>
+    :root {
+      --bg: #090d18;
+      --panel: #121a2b;
+      --text: #f7f8ff;
+      --muted: #aab4cc;
+      --accent: #7c5cff;
+      --cyan: #20d9d2;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    a { color: inherit; text-decoration: none; }
+
+    .container {
+      width: min(1120px, 92%);
+      margin: auto;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      background: rgba(9, 13, 24, .96);
+      border-bottom: 1px solid #20283b;
+    }
+
+    nav {
+      min-height: 76px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      flex-wrap: wrap;
+      padding: 14px 0;
+    }
+
+    .logo {
+      font-size: 28px;
+      font-weight: 900;
+      letter-spacing: 2px;
+    }
+
+    .logo span { color: var(--cyan); }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .nav-links a { color: var(--muted); font-size: 14px; }
+    .nav-links a:hover { color: var(--cyan); }
+
+    .button {
+      display: inline-block;
+      background: var(--accent);
+      color: white;
+      border: 0;
+      border-radius: 10px;
+      padding: 12px 20px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .button:hover { filter: brightness(1.12); }
+
+    .hero {
+      padding: 100px 0 90px;
+      text-align: center;
+      background:
+        radial-gradient(ellipse at 50% 0%, #34236b 0%, transparent 55%),
+        var(--bg);
+    }
+
+    .tag {
+      display: inline-block;
+      padding: 7px 13px;
+      border: 1px solid #51417d;
+      color: var(--cyan);
+      border-radius: 30px;
+      font-size: 13px;
+      margin-bottom: 22px;
+    }
+
+    h1 {
+      font-size: clamp(42px, 8vw, 76px);
+      line-height: 1.08;
+      margin-bottom: 22px;
+    }
+
+    h1 span {
+      background: linear-gradient(90deg, var(--cyan), #a88cff);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+
+    .hero p {
+      color: var(--muted);
+      max-width: 680px;
+      margin: 0 auto 30px;
+      font-size: 18px;
+    }
+
+    .hero-actions {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+
+    .secondary {
+      border: 1px solid #414b65;
+      background: transparent;
+    }
+
+    section { padding: 76px 0; }
+
+    .section-heading {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .section-heading h2 {
+      font-size: clamp(28px, 5vw, 40px);
+      margin-bottom: 10px;
+    }
+
+    .section-heading p {
+      color: var(--muted);
+      max-width: 650px;
+      margin: auto;
+    }
+
+    .features {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      background: var(--panel);
+      border: 1px solid #242e45;
+      padding: 26px;
+      border-radius: 18px;
+    }
+
+    .card .emoji { font-size: 34px; margin-bottom: 12px; }
+    .card h3 { margin-bottom: 10px; }
+    .card p { color: var(--muted); font-size: 15px; }
+
+    .about {
+      background: #0d1321;
+      border-top: 1px solid #20283b;
+      border-bottom: 1px solid #20283b;
+    }
+
+    .about-content {
+      max-width: 780px;
+      margin: auto;
+      text-align: center;
+    }
+
+    .about-content p {
+      color: var(--muted);
+      margin: 14px 0;
+    }
+
+    .contact-card {
+      max-width: 650px;
+      margin: auto;
+      background: var(--panel);
+      border: 1px solid #242e45;
+      border-radius: 18px;
+      padding: 28px;
+      text-align: center;
+    }
+
+    .contact-card p { color: var(--muted); margin: 12px 0; }
+
+    footer {
+      padding: 30px 0;
+      border-top: 1px solid #20283b;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .footer-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 18px;
+      flex-wrap: wrap;
+    }
+
+    .footer-links { display: flex; gap: 16px; flex-wrap: wrap; }
+    .footer-links a:hover { color: var(--cyan); }
+
+    @media (max-width: 600px) {
+      .hero { padding: 70px 0; }
+      nav { justify-content: center; }
+      .nav-links { justify-content: center; }
+      section { padding: 55px 0; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <nav class="container">
+    <a class="logo" href="#home">CIRCLE<span>.</span></a>
+    <div class="nav-links">
+      <a href="#features">Features</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+      <a class="button" href="#features">Explore CIRCLE</a>
+    </div>
+  </nav>
+</header>
+
+<main>
+  <section class="hero" id="home">
+    <div class="container">
+      <span class="tag">CONNECT · CREATE · EXPERIENCE</span>
+      <h1>Your people.<br><span>Your world.</span></h1>
+      <p>
+        Discover a new way to connect through communities, creator experiences
+        and shared moments. Welcome to CIRCLE.
+      </p>
+      <div class="hero-actions">
+        <a class="button" href="#features">Discover Features</a>
+        <a class="button secondary" href="#about">Learn About Us</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="features">
+    <div class="container">
+      <div class="section-heading">
+        <h2>One platform. Many experiences.</h2>
+        <p>
+          CIRCLE is being developed to bring people and creators together
+          through engaging digital experiences.
+        </p>
+      </div>
+
+      <div class="features">
+        <article class="card">
+          <div class="emoji">🎙️</div>
+          <h3>Live Rooms</h3>
+          <p>Connect with others through planned live audio and community room experiences.</p>
+        </article>
+
+        <article class="card">
+          <div class="emoji">🎬</div>
+          <h3>Creator Content</h3>
+          <p>Explore the vision for a space where creators can share content and grow their audiences.</p>
+        </article>
+
+        <article class="card">
+          <div class="emoji">👥</div>
+          <h3>Communities</h3>
+          <p>Bring people together around interests, conversations and shared activities.</p>
+        </article>
+
+        <article class="card">
+          <div class="emoji">💳</div>
+          <h3>Digital Payments</h3>
+          <p>Payment features are planned and will be offered only after the required integrations and testing.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="about" id="about">
+    <div class="container">
+      <div class="about-content">
+        <h2>About CIRCLE</h2>
+        <p>
+          CIRCLE is a developing digital platform focused on social connection,
+          creator communities and interactive experiences.
+        </p>
+        <p>
+          We are working toward a reliable, accessible experience for users in
+          Kenya and beyond. Features may change as development and testing continue.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="container">
+      <div class="section-heading">
+        <h2>Get in touch</h2>
+        <p>Questions about CIRCLE? Use the contact details published here once they have been configured.</p>
+      </div>
+
+      <div class="contact-card">
+        <h3>CIRCLE Support</h3>
+        <p>
+          Support email: <strong>ADD YOUR REAL SUPPORT EMAIL</strong>
+        </p>
+        <p>
+          Business location: <strong>ADD YOUR REAL BUSINESS LOCATION</strong>
+        </p>
+        <p>Please replace these placeholders with contact details you can access before publishing the site for payment-provider review.</p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="container footer-content">
+    <p>© <span id="year"></span> CIRCLE. All rights reserved.</p>
+    <div class="footer-links">
+      <a href="privacy.html">Privacy Policy</a>
+      <a href="terms.html">Terms of Service</a>
+      <a href="refunds.html">Refund Policy</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+
+</body>
+  </html>
+          
